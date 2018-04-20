@@ -1,0 +1,254 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
+
+		<link
+			rel="stylesheet"
+			href="prism-atom-dark.css"
+			type="text/css"
+			media="screen"
+		/>
+
+		<script type="text/javascript" src="prism.js"></script>
+		<script type="text/javascript" src="prism.ruby.js"></script>
+
+		<title>Gary Ravago</title>
+		<meta name="description" content="Gary resides in the city of Santa Cruz 	where he graduated from
+					UC Santa Cruz with a BA in Film and Digital Media.  Previously
+					 he served in the United States Navy as a Information
+					Systems Technician and currently is working in the IT field."/>
+	</head>
+	
+	<body>
+		<div class="about-container">
+			<ul>
+				<li><a href="#" class="nav-link">About</a></li>
+				<li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+				<li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+				<li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+				<li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
+			</ul>
+
+
+			<div class="about">
+				<img src="me.jpg" class="me"/>
+
+				<h1>Gary Ravago</h1>
+				
+				<h2>BUSINESS INTELLIGENCE | SOFTWARE DEVELOPER</h2>
+
+				<hr class="grey"/>
+				
+				<p class="bio">
+					Gary resides in the city of Santa Cruz where he graduated from
+					UC Santa Cruz with a BA in Film and Digital Media.  Previously
+					he served in the United States Navy as a Information
+					Systems Technician and currently is working for one of
+					the best photo manufacturing labs in the world doing data analytics
+					and production automation.
+				</p>
+				<p class="bio">
+					Some of his future goals include transitioning into a software
+					engineering career, join a competitive salsa team, and learn to 
+					speak Spanish fluently.
+				</p>
+			</div>
+		</div>
+		<h3 id="code-samples">Code Snippets</h3>
+		<hr class="red"/>
+
+		<div class="box">
+			<h4>Temperature Conversion</h4>
+			<p>
+				This ruby program will prompt the user for a temperature in degrees
+				Celsius and let the user know what the corresponding tempature is in
+				Fahrenheit.
+			</p>
+		</div>
+
+		<div class="box">
+<pre><code class="language-ruby">
+def cels_to_fahr(n)
+  return (n.to_f * 9 / 5) + 32
+end
+
+print &quot;Enter a Celsius value: &quot;
+c = gets.chomp
+
+conversion = cels_to_fahr(c)
+puts &quot;The Celsius value #{c.to_s}C is 
+equal to #{conversion.to_s} degrees Fahrenheit&quot;
+</code></pre>
+		</div>
+
+		<br class="clear" />
+
+		<div class="box">
+<pre><code class="language-ruby">
+def get_ordinal_number(number)
+  right_most_digit = number % 10
+  
+  if right_most_digit == 1 &amp;&amp; !is_teen_exception?(number)
+    number.to_s + 'st'
+  elsif right_most_digit == 2 &amp;&amp; !is_teen_exception?(number)
+    number.to_s + 'nd'
+  elsif right_most_digit == 3 &amp;&amp; !is_teen_exception?(number)
+    number.to_s + 'rd'
+  else
+    number.to_s + 'th'
+  end
+end
+
+def is_teen_exception?(number)
+  number % 100 == 11 ||  number % 100 == 12 || number % 100 == 13
+end
+
+print &quot;Enter a number: &quot;
+number = gets.chomp.to_i
+puts &quot;That's the #{get_ordinal_number(number)} item&quot;
+</code></pre>
+		</div>
+
+		<div class="box">
+			<h4>Ordinal Challenge</h4>
+			<p>
+				This ruby program will convert a plain number to the ordinal of the
+				number.  So for example, if the user enters 2, it will display 2nd, if
+				the user enters 3, it will display 3rd, etc.
+			</p>
+		</div>
+
+		<br class="clear" />		
+
+		<div class="box">
+			<h4>Foobar</h4>
+			<p>
+				This ruby program is an adaptation of a classic technical interview
+				problem which displays sequences of the Foobar pattern.
+			</p>
+		</div>
+
+		<div class="box">
+<pre><code class="language-ruby">			
+print &quot;How many items do you want to see?  &quot;
+items = gets.chomp.to_i
+
+number = 1
+while number &lt;= items
+  
+  if number % 3 == 0 &amp;&amp; number % 5 == 0
+    puts &quot;Foobar&quot;
+  elsif number % 3 == 0 
+    puts &quot;Foo&quot;
+  elsif number % 5 == 0
+    puts &quot;Bar&quot;
+  else
+    puts number
+  end
+  
+  number = number + 1
+end
+</code></pre>
+		</div>
+
+		<br class="clear" />		
+	
+
+		<h3 id="web-apps">Web Apps</h3>
+		<hr class="red" />
+
+
+		<div class="box">
+			<h4>Quote Generator</h4>
+			<img src="splurty.png" class="full-width"/>
+			<p>
+				A database-powered quote generator with a mobile-first design, using the
+				Ruby on Rails framework, HTML, and CSS.  Uses Git and GitHub for
+				version control, and launched on Heroku
+		</div>
+
+		<div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="red"/>
+    <p class="skills-and-tools">
+    	Gary has developed profiency and expertise in the following
+    	programming languages and comfort with the following tools.
+    </p>
+    <div class="icons">
+	    <img src="github.png" class="icon" />
+		  <img src="rubocop.png" class="icon" />
+	    <img src="trello.png" class="icon" />
+	    <img src="slack.png" class="icon" />
+	    <img src="codeship.png" class="icon" />
+
+	    <br class="clear" />
+	    <img src="skills.png" class="icon" />
+  	</div>
+
+
+  	<div class="contact-me" id="hire-me">
+  		<h3 class="contact-headline">Contact</h3>
+  		<hr class="red"/>	
+  		<p class="contact-info">
+  			Currently entertaining new opportunities.
+  			Please get in touch via email:
+  		</p>
+
+  		<p>
+  			<a href="mailto:ravagog@gmail.com" class="contact-link">
+  				ravagog@gmail.com
+  			</a>
+  		</p>
+  	</div>
+	</body>
+</html>
